@@ -1,16 +1,23 @@
 body {
-    background-color: black;
-    align-items: center;
+    background-color: rgb(61, 61, 61);
+    box-sizing:border-box;
+    margin:auto;
   }
   
   h1 {
     color: rgb(255, 255, 255);
-    text-align: center;
+    text-align: left;
   }
   
   p {
     color: rgb(255, 255, 255);
     font-family: verdana;
     font-size: 20px;
+  }
+
+  .grid_container {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: auto;
   }
   
