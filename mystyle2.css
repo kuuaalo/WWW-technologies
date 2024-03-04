@@ -1,0 +1,31 @@
+.header {
+    grid-area:header;
+}
+.topnav {
+    grid-area:topnav;
+}
+.row {
+    grid-area:row;
+}
+.side {
+    grid-area:side;
+}
+.side2 {
+    grid-area:side2;
+}
+
+.middle {
+    grid-area:middle;
+}
+.footer {
+    grid-area:row;
+}
+
+.wrapper {
+    display:grid;
+    grid-template-areas:
+        "header header header"
+        "topnav topnav topnav"
+        "side middle side2"
+        "footer footer footer";
+}
