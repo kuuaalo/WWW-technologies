@@ -1,10 +1,5 @@
 body {
-    background-color: rgb(61, 61, 61);
-}
-
-
-.topnav a {
-    color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .grid-container {
@@ -15,8 +10,8 @@ body {
     grid-template-areas:
     "topnav topnav"
     "home home"
-    "images images2"
     "about about"
+    "gallery gallery"
     "links links"
     ;
 }
@@ -24,12 +19,15 @@ body {
     width:100%;
 }
 
-#topnav {
+.topnav {
     
     box-sizing: border-box;
     background-color: white;
     padding:1.5rem;
     grid-area:topnav;
+}
+.topnav a {
+    color: black;
 }
 
 #home {
@@ -37,19 +35,73 @@ body {
     grid-area: home;
     box-sizing: border-box;
     padding: 1rem;
+
 }
 
 #about {
+    justify-content: center;
     grid-area: about;
 }
 
 #images {
+    
     grid-area:images;
     
 }
 #images2 {
     grid-area:images2;
     align-self: end;
+}
+#gallery {
+    display: grid;
+    grid-template-areas: image image2;
+}
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#links {
+    justify-content: center;
+    grid-area:links;
+}
+
+.header {
+    position: relative;
+    display: grid;
+    
+    
+}
+.header img {
+    
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+  }
+
+.header h1{
+    position: absolute;
+    top: 80%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white; /* Text color */
+    font-size: 4em;
+}
+.quote {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+h1 {
+    text-align: center;
+}
+p {
+    text-align: center;
 }
 @media only screen and (min-width: 600px) {
     .grid-container {
@@ -63,3 +115,4 @@ body {
         "links links";
       max-width: 960px;
     }
+}
