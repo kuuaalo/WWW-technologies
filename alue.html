@@ -3,39 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Peltolammi</title>
     <link rel="stylesheet" href="mystyle3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-<script>
-    function toggleMobileMenu() {
-  var x = document.getElementById("links");
-  if (window.getComputedStyle(x).display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-} 
-</script>
+    <!--I made a simple single-page mobile website and used grid to build it.-->
+    <!--I used some absolute/relative positioning since, I didn't know if it was allowed.-->
+    <!--Hardest part was creating the mobile responsive menu, I tried multiple different tutorials for it.-->
+    <!--I also found naming the sections correctly challenging and wasn't sure when to use div class vs. id.-->
+    <!--The site was tested with Firefox Inspect responsive design mode and Nothing Phone.-->
 </head>
-
 <body>
     <div class="grid-container">
-    <div class="topnav">
-        
-        <div id="links">
-        <a href="#home">Peltolammi</a>
-        <a href="#about">Palvelut</a>
-        <a href="#gallery">Kuvia</a>
-        <a href="#links">Link</a>
+        <div class="topnav" id="myTopnav">
+            <a href="#home" >Peltolammi</a>
+            <a href="#about">Palvelut</a>
+            <a href="#gallery">Galleria</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <img src="images/menu.png" alt="Menu">
+            </a>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
-            <img src="images/menu.png" alt="Menu">
-          </a>
-        
-    </div>
     <div id="home">
         <div class="header">
             <img src="images/heinäthumb.webp" alt="Scenery">
@@ -56,21 +44,28 @@
         <h1>Galleria</h1>
         <p>Kuvia Peltolammin luonnosta</p>
         <div class="gallery-images">
-            <img src="images/jääthumb.webp" alt="Scenery">
-            <img src="images/rastasthumb.webp" alt="Scenery">
+            <img src="images/jääthumb.webp" alt="Pond ice scenery">
+            <img src="images/rastasthumb.webp" alt="Image of a small bird sitting on a log">
             <img src="images/syksyinenthumb.webp" alt="Scenery">
             <img src="images/talvinenthumb.webp" alt="Scenery">
         </div>
     </div>
-    <div id="links2">
-        <h1>Links </h1>
-        <p>Welcome to the Links section!</p>
-        <img src="images/puuthumb.webp" alt="Scenery">
-    </div>
-    <footer>
-        <p>Aalo Kuuspalo</p>
-    </footer>
 </div>
-</div>
+<footer>
+    <p>Lisää tietoa Peltolammista:</p>
+    <a href="https://fi.wikipedia.org/wiki/Peltolammi">Wikipedia</a>
+    <a href="https://www.tampere.fi/hyvinvointikeskukset-ja-yhteiso-keskukset/peltolammi-ja-multisilta">Tampereen kaupunki</a>
+    <p>© Aalo Kuuspalo</p>
+</footer>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    } 
+</script>
 </body>
 </html>
