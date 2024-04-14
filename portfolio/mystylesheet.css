@@ -6,6 +6,8 @@ p{
 }
 h1{
     color:#e4e2dd;
+    font-size: 4em;
+    font-weight: bold;
 }
 h3{
     color:#e4e2dd;
@@ -18,4 +20,51 @@ a{
     font-size: 16px; /* Font size */
     text-decoration: none; /* Remove default underline */
     transition: color 0.3s ease; /* Smooth transition for color change */
+}
+#hero-section  {
+    min-height: 80vh;
+    height: 80vh;
+    margin-top: 15%;
+}
+  .btn {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+ 
+  } 
+  .btn a {
+    
+  }
+   
+  .btn:hover .btn-slide-show-text1 {
+    margin-left: 65px;
+  } 
+   
+  .btn-rect-to-round {
+    height: 55px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    text-align: center; 
+    padding-top: 13px;
+  } 
+   
+  .btn-rect-to-round:hover {
+    border-radius: 60px;
+    color: rgb(255, 255, 255) !important;
+  } 
+   
+  .btn-rect-to-round--red {
+    color: #d44527 !important;
+    border: 2px solid #d44527;
+  } 
+   
+  .btn-rect-to-round--red:hover {
+    border-color: #d44527;
+    background: #d44527;
+  } 
+@media only screen and (min-width: 600px) {
+    
 }
