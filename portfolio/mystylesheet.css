@@ -14,6 +14,12 @@ h3{
 }
 a{
     color:#d44527;
+
+}
+a img{
+  width:60px;
+  height:60px;
+  padding: 10px;
 }
 .navbar-nav .nav-item .nav-link {
     color:#d44527;
@@ -65,6 +71,6 @@ a{
     border-color: #d44527;
     background: #d44527;
   } 
-@media only screen and (min-width: 600px) {
-    
+.form-group label{
+  color:#d44527;
 }
