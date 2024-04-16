@@ -3,6 +3,7 @@ body{
 }
 p{
     color:#e4e2dd;
+    font-size:1em;
 }
 h1{
     color:#e4e2dd;
@@ -21,8 +22,12 @@ a img{
   height:60px;
   padding: 10px;
 }
+.navbar {
+  background-color:#e4e2dd;
+}
 .navbar-nav .nav-item .nav-link {
     color:#d44527;
+    
     font-size: 16px; /* Font size */
     text-decoration: none; /* Remove default underline */
     transition: color 0.3s ease; /* Smooth transition for color change */
@@ -73,4 +78,13 @@ a img{
   } 
 .form-group label{
   color:#d44527;
+}
+
+#resume-section .row{
+  border-style: solid;
+  border-color: #d44527;
+  padding: 3rem 2rem 3rem 2rem;
+}
+#resume-section h3 {
+  color: #d44527;
 }
