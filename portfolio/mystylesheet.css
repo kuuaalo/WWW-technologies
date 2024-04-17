@@ -1,81 +1,91 @@
 body{
-    background-color:#2b2b2b;
+  background-color:#2b2b2b;
+  font-family: "Montserrat", sans-serif, Arial, Helvetica; /*Which fonts to use*/
 }
-p{
-    color:#e4e2dd;
-    font-size:1em;
-}
-h1{
-    color:#e4e2dd;
-    font-size: 4em;
-    font-weight: bold;
-}
-h3{
-    color:#e4e2dd;
-}
-a{
-    color:#d44527;
 
+p{
+  color:#e4e2dd;
+  font-size:1em;
 }
-a img{
-  width:60px;
+
+h1{
+  color:#e4e2dd;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+h3{
+  color:#e4e2dd;
+}
+
+a{
+  color:#d44527;
+}
+
+a img{ /*Link image sizing*/
+  width:60px; 
   height:60px;
   padding: 10px;
 }
+
 .navbar {
   background-color:#e4e2dd;
 }
-.navbar-nav .nav-item .nav-link {
-    color:#d44527;
-    
-    font-size: 16px; /* Font size */
-    text-decoration: none; /* Remove default underline */
-    transition: color 0.3s ease; /* Smooth transition for color change */
+
+.navbar-nav .nav-item .nav-link .nav-link-b {
+  color:#d44527;
+  font-size: 16px; /* Font size */
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease; /* Smooth transition for color change */
 }
+.nav-link-b {
+  color:#2b2b2b;
+  text-decoration: none;
+}
+
 #hero-section  {
-    min-height: 80vh;
-    height: 80vh;
-    margin-top: 15%;
+  min-height: 80vh; /* Prevents the section resizing to smaller than 80% of viewport */
+  height: 80vh; /* Specifies section size */
+  margin-top: 15%;
 }
-  .btn {
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
- 
-  } 
-  .btn a {
-    
-  }
+#about-section  {
+  min-height: 90vh; /* Prevents the section resizing to smaller than 80% of viewport */
+  height: 90vh; /* Specifies section size */
+  padding-top: 10%; /* More vertical padding for scroll */
+  
+}
+
+.btn {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif; /* Button priority font*/
+  text-transform: uppercase; /* Button always in uppercase letters */
+} 
    
-  .btn:hover .btn-slide-show-text1 {
-    margin-left: 65px;
-  } 
-   
-  .btn-rect-to-round {
-    height: 55px;
-    width: 200px;
-    font-size: 16px;
-    font-weight: 600;
-    background: transparent;
-    cursor: pointer;
-    transition: 0.5s ease-in;
-    text-align: center; 
-    padding-top: 13px;
-  } 
-   
-  .btn-rect-to-round:hover {
-    border-radius: 60px;
-    color: rgb(255, 255, 255) !important;
-  } 
-   
-  .btn-rect-to-round--red {
-    color: #d44527 !important;
-    border: 2px solid #d44527;
-  } 
-   
-  .btn-rect-to-round--red:hover {
-    border-color: #d44527;
-    background: #d44527;
-  } 
+.btn-rect-to-round {
+  height: 55px;
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  background: transparent;
+  transition: 0.5s ease-in; /* Text slides in place on page load */
+  text-align: center; 
+  padding-top: 13px;
+} 
+
+.btn-rect-to-round:hover {
+  border-radius: 60px; /* Changes button shape on hover */
+  color: rgb(255, 255, 255) !important; /* Changes text color on hover */
+} 
+
+.btn-rect-to-round--red {
+  color: #d44527 !important; 
+  border: 2px solid #d44527;
+} 
+
+.btn-rect-to-round--red:hover {
+  border-color: #d44527;
+  background: #d44527; /* Changes button color on hover*/
+} 
+
 .form-group label{
   color:#d44527;
 }
@@ -83,8 +93,25 @@ a img{
 #resume-section .row{
   border-style: solid;
   border-color: #d44527;
-  padding: 3rem 2rem 3rem 2rem;
+  padding: 4rem 0rem 4rem 0rem; /* Custom padding bc bootstrap wasn't enough */
 }
+
 #resume-section h3 {
-  color: #d44527;
+  color: #d44527; /* Colors resume headers differently from others */
+}
+
+#contact-section .btn-rect-to-round {
+  width: 100px;
+  transition: 0s;  /* Contact form button static */
+  margin-top: 2em;
+} 
+
+@media only screen and (min-width: 600px) { /*media queries for wide screen*/
+.nav-link-b {
+  color:#2b2b2b;
+  text-decoration: none;
+  position: absolute;  /*Positions header text absolutely compared to header */
+  top: 30%; 
+  left: 95%;
+}
 }
